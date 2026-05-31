@@ -12,11 +12,11 @@ def create_names(number_of_names: int):
     names_lst = []
     for i in range(0, number_of_names):
         # Get prefix
-        prefix_idx = randint(0, len(lines))
+        prefix_idx = randint(0, len(lines) - 1)
         prefix = lines[prefix_idx].split('.')[-1].strip()
 
         # Get suffix
-        suffix_idx = randint(0, len(lines))
+        suffix_idx = randint(0, len(lines) - 1)
         suffix = lines[suffix_idx].split('.')[-1].strip()
 
         names_lst.append(prefix + suffix)
